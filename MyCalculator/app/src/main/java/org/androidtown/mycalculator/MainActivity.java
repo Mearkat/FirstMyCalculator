@@ -12,4 +12,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //  이러다가 지각 하겠습니다 . 연말에 윤하 콘서트 연말에 보러 안가??
+	//	시간과 돈이 없어...
 }
