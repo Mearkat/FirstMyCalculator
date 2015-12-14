@@ -10,7 +10,6 @@
     tools:context="org.androidtown.mycalculator.MainActivity"
     android:orientation="vertical">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -177,19 +176,19 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="-"
-                android:id="@+id/button_minus"
+                android:text="."
+                android:id="@+id/button_dot"
                 android:textSize="50dp"
-                android:onClick="btn_min"
+                android:onClick="btn_dot"
                 android:layout_weight="1" />
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="="
-                android:id="@+id/button_ans"
+                android:text="-"
+                android:id="@+id/button_minus"
                 android:textSize="50dp"
-                android:onClick="btn_ans"
+                android:onClick="btn_min"
                 android:layout_weight="1" />
         </LinearLayout>
 
@@ -211,15 +210,6 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="."
-                android:id="@+id/button_dot"
-                android:textSize="50dp"
-                android:onClick="btn_dot"
-                android:layout_weight="1" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:text="%"
                 android:id="@+id/button_percent"
                 android:textSize="50dp"
@@ -233,6 +223,15 @@
                 android:id="@+id/button_ac"
                 android:textSize="30dp"
                 android:onClick="btn_ac"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="="
+                android:id="@+id/button_ans"
+                android:textSize="50dp"
+                android:onClick="btn_ans"
                 android:layout_weight="1" />
         </LinearLayout>
 

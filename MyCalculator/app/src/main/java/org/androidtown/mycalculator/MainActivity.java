@@ -9,11 +9,13 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView ;
     String value = "";
+    String[] data = new String[20];
+    String setvalue ="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         textView = (TextView)findViewById(R.id.textView);
     }
 
@@ -61,28 +63,34 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void btn_x(View v){
-
+        value += "X";
+        textView.setText(String.valueOf(value));
     }
     public void btn_div(View v){
-
+        value += "/";
+        textView.setText(String.valueOf(value));
     }
     public void btn_plu(View v){
 
+        value += "+";
+        textView.setText(String.valueOf(value));
     }
     public void btn_min(View v){
-
+        value += "-";
+        textView.setText(String.valueOf(value));
     }
     public void btn_ac(View v){
-
+        value="";
+        textView.setText(String.valueOf(value));
     }
     public void btn_dot(View v){
-
+        value=".";
+        textView.setText(String.valueOf(value));
     }
     public void btn_per(View v){
-
+        textView.setText(String.valueOf(value));
     }
     public void btn_cha(View v){
 
     }
-
 }
