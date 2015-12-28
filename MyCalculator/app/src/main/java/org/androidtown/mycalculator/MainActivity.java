@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
+        //칼큐레이터 베타 1.0 버전
 public class MainActivity extends AppCompatActivity {
 
     TextView textView ;
