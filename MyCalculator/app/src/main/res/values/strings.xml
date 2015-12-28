@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyCalculator</string>
+    <string name="calname">계산기</string>
 </resources>

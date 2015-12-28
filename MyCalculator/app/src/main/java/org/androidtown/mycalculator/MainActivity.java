@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     String value = "";
     String[] data = new String[20];
     String setvalue ="";
+    double answerbefore = 0;
+    String answer = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +63,17 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(String.valueOf(value));
     }
     public void btn_ans(View v){
+        try{
+            CalMethods cal = new CalMethods();
+            answerbefore = cal.answerData(value);
+            answer += answerbefore;
+            textView.setText(String.valueOf(answer));
+            value = "";
+            answer="";
 
+        }catch(Exception e){
+            Toast.makeText(getApplicationContext(), "오류가 발생했습니다. 입력 방식을 바꿔 주시던지 다시 나갔다 들어와주세요" , Toast.LENGTH_LONG).show();
+        }
     }
     public void btn_x(View v){
         value += "X";
@@ -84,13 +97,22 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(String.valueOf(value));
     }
     public void btn_dot(View v){
-        value=".";
+        value+=".";
         textView.setText(String.valueOf(value));
     }
     public void btn_per(View v){
-        textView.setText(String.valueOf(value));
+        try {
+            double k;
+            k = Double.parseDouble(value) / 100;
+            String t = "";
+            t = t + k + " %";
+            textView.setText(String.valueOf(t));
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), "%는 값을 입력한 수에 한번만 가능합니다." ,Toast.LENGTH_LONG).show();
+        }
     }
     public void btn_cha(View v){
-
+        value += "m";
+        textView.setText(String.valueOf(value));
     }
 }
